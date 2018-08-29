@@ -287,7 +287,7 @@ static void print_kind(int filekind, u8 size, int size_known)
   char buf[256], *kindname;
 
   if (filekind == 0)
-    kindname = "Regular file";
+    kindname = "Disk Image";
   else if (filekind == 1)
     kindname = "Block device";
   else if (filekind == 2)

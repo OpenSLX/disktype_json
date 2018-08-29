@@ -404,7 +404,7 @@ void add_file_characteristics_json()
     /* The following statements will add text to the json String. */
     
     /* {"file kind": " */
-    insert_chars(&json, "{\"file kind\": \"");
+    insert_chars(&json, "{\"type\": \"");
 
     /* <file_kind> */
     insert_string(&json, &given_file.file_kind);
