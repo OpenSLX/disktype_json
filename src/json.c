@@ -532,7 +532,8 @@ void add_obj_json(int obj_id, int first_in_a_list)
 void convert_to_json()
 {
   initialize_String(&json, 1000);
-
+  
+  insert_chars(&json, "{ \"diskType\" : ");
   /* include filekind, path and size */
   add_file_characteristics_json();
   
@@ -559,6 +560,8 @@ void convert_to_json()
 
   /* Closing brackets for the whole file */
   insert_chars(&json, "]}");
+
+  insert_chars(&json, "}");
 
   /* Extract char array. */
   extract_chars(&json, json_output);
